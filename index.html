@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>Budapesthelg – Rudas och stadsschema</title>
+  <style>
+    :root{--bg:#f7f6f2;--card:#fff;--text:#181817;--muted:#6d6b65;--line:#deddd7;--soft:#eeece6;--accent:#181817;--accentText:#fff;--radius:14px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}.app{width:min(760px,100%);margin:auto;padding:20px 16px 64px}.eyebrow,.meta,.tag{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;text-transform:uppercase;letter-spacing:.08em}.eyebrow{font-size:11px;color:var(--muted)}h1{font-size:clamp(24px,6vw,38px);line-height:1.08;letter-spacing:-.035em;margin:8px 0 10px}h2{font-size:20px;letter-spacing:-.02em;margin:6px 0}.lead{margin:0;color:var(--muted);font-size:15px}.summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:22px 0}.metric{border:1px solid var(--line);border-radius:var(--radius);padding:12px;background:rgba(255,255,255,.55)}.metric .meta{font-size:9px;color:var(--muted)}.metric strong{display:block;margin-top:6px;font-size:17px;font-weight:600}.tabs{position:sticky;top:0;z-index:10;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:6px;background:rgba(247,246,242,.94);border:1px solid var(--line);border-radius:12px;backdrop-filter:blur(10px)}button{font:inherit;border:0;border-radius:8px;padding:9px 4px;background:transparent;color:var(--muted);cursor:pointer}button.active{background:var(--accent);color:var(--accentText)}button span{display:block;font-size:12px}button small{display:block;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:9px;opacity:.7;margin-top:1px}.day{display:none}.day.active{display:block}.day-head{padding:28px 2px 16px}.day-head p{margin:5px 0 0;color:var(--muted);font-size:14px}.schedule{border:1px solid var(--line);border-radius:var(--radius);background:var(--card);overflow:hidden}.item{display:grid;grid-template-columns:32px minmax(0,1fr);gap:12px;padding:17px 15px;border-bottom:1px solid var(--line)}.item:last-child{border-bottom:0}.item.feature{background:var(--soft)}.num{width:28px;height:28px;border:1px solid var(--line);border-radius:8px;display:grid;place-items:center;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--muted)}.item-top{display:flex;justify-content:space-between;gap:10px;align-items:start}.time{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:var(--muted)}.tag{font-size:9px;border:1px solid var(--line);border-radius:999px;padding:3px 7px;white-space:nowrap}.item h3{font-size:15px;margin:8px 0 3px}.item p{font-size:13px;color:var(--muted);margin:0}.links{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}.links a,.practical a{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--line);border-radius:8px;padding:7px 9px;color:var(--text);text-decoration:none;font-size:12px;background:var(--card)}.feature .links a:first-child{background:var(--accent);color:var(--accentText);border-color:var(--accent)}.links a::after,.practical a::after{content:"↗"}.practical{margin-top:30px}.practical-list{border:1px solid var(--line);border-radius:var(--radius);background:var(--card);overflow:hidden}.practical-row{padding:14px 15px;border-bottom:1px solid var(--line)}.practical-row:last-child{border:0}.practical-row strong{font-size:14px}.practical-row p{font-size:12px;color:var(--muted);margin:4px 0 8px}.footer{margin-top:26px;color:var(--muted);font-size:11px;text-align:center}@media(max-width:430px){.app{padding:16px 12px 48px}.summary{grid-template-columns:repeat(2,minmax(0,1fr))}.metric:last-child{grid-column:span 2}.tabs small{display:none}.item{padding:15px 12px}.item-top{align-items:center}}@media(prefers-color-scheme:dark){:root{--bg:#151514;--card:#1c1c1a;--text:#f2f1ec;--muted:#aaa79f;--line:#35342f;--soft:#24231f;--accent:#f2f1ec;--accentText:#181817}.tabs{background:rgba(21,21,20,.94)}.metric{background:rgba(28,28,26,.62)}}
+  </style>
+</head>
+<body>
+<main class="app">
+  <header>
+    <div class="eyebrow">Budapest · 3 nätter · fredag–måndag</div>
+    <h1>En lugn helg med Rudas</h1>
+    <p class="lead">Ett spa, tydliga block och gott om återhämtning.</p>
+    <div class="summary">
+      <div class="metric"><span class="meta">Spa · 2 pers</span><strong>≈ 900 kr</strong></div>
+      <div class="metric"><span class="meta">72 h-kort · 2</span><strong>≈ 350 kr</strong></div>
+      <div class="metric"><span class="meta">Tempo</span><strong>Lugnt</strong></div>
+    </div>
+  </header>
+  <nav class="tabs" aria-label="Välj dag">
+    <button class="active" data-day="fre"><span>Fredag</span><small>Ankomst</small></button>
+    <button data-day="lor"><span>Lördag</span><small>Buda + spa</small></button>
+    <button data-day="son"><span>Söndag</span><small>Park + shopping</small></button>
+    <button data-day="man"><span>Måndag</span><small>Vidare</small></button>
+  </nav>
+
+  <section class="day active" id="fre">
+    <div class="day-head"><div class="eyebrow">Fredag · Ankomst</div><h2>Centrum och Donau</h2><p>En mjuk start nära hotellet med promenad och middag i centrum.</p></div>
+    <div class="schedule">
+      <article class="item"><div class="num">1</div><div><div class="item-top"><span class="time">13.00</span><span class="tag">Resa</span></div><h3>Flyg till Budapest</h3><p>100E Airport Express köps separat från vanliga periodkort.</p><div class="links"><a href="https://bkk.hu/en/travel-information/airport-express/" target="_blank">100E Airport Express</a></div></div></article>
+      <article class="item"><div class="num">2</div><div><div class="item-top"><span class="time">Eftermiddag</span><span class="tag">Incheckning</span></div><h3>Hotel Moments Budapest</h3><p>Incheckning och en kort paus innan kvällspromenaden.</p><div class="links"><a href="https://www.google.com/maps/search/?api=1&query=Hotel+Moments+Budapest" target="_blank">Öppna i Maps</a><a href="https://hotelmomentsbudapest.hu/" target="_blank">Hotellets webbplats</a></div></div></article>
+      <article class="item"><div class="num">3</div><div><div class="item-top"><span class="time">Kväll</span><span class="tag">Promenad</span></div><h3>Basilikan, Donau och parlamentet</h3><p>Promenera via Sankt Stefansbasilikan till parlamentet och Skorna vid Donau. Avsluta med middag i centrum.</p><div class="links"><a href="https://www.google.com/maps/dir/?api=1&origin=Hotel+Moments+Budapest&destination=Shoes+on+the+Danube+Bank&waypoints=St.+Stephen%27s+Basilica%7CHungarian+Parliament+Building&travelmode=walking" target="_blank">Promenadrutt</a></div></div></article>
+    </div>
+  </section>
+
+  <section class="day" id="lor">
+    <div class="day-head"><div class="eyebrow">Lördag · Buda + spa</div><h2>Slottskvarteren och Rudas</h2><p>Helgens huvuddag: utsikter i Buda följt av ett långt, lugnt spabesök.</p></div>
+    <div class="schedule">
+      <article class="item"><div class="num">1</div><div><div class="item-top"><span class="time">Tidig morgon</span><span class="tag">2–3 tim</span></div><h3>Fiskarbastionen och Mattiaskyrkan</h3><p>Börja tidigt för lugnare gränder och bättre plats vid utsiktspunkterna.</p><div class="links"><a href="https://www.google.com/maps/search/?api=1&query=Fisherman%27s+Bastion+Budapest" target="_blank">Öppna i Maps</a><a href="https://matyas-templom.hu/" target="_blank">Mattiaskyrkan</a></div></div></article>
+      <article class="item"><div class="num">2</div><div><div class="item-top"><span class="time">Förmiddag</span><span class="tag">Promenad</span></div><h3>Budaslottet</h3><p>Fortsätt söderut genom slottsområdet och ta lunch innan badet.</p><div class="links"><a href="https://www.google.com/maps/dir/?api=1&origin=Fisherman%27s+Bastion&destination=Rudas+Thermal+Bath&waypoints=Buda+Castle&travelmode=walking" target="_blank">Rutt genom Buda</a></div></div></article>
+      <article class="item feature"><div class="num">3</div><div><div class="item-top"><span class="time">13.00–16.30</span><span class="tag">3,5 tim</span></div><h3>Rudasbadet</h3><p>Helgens enda spa. Cirka 450 kr per person beroende på dag, paket och växelkurs.</p><div class="links"><a href="https://www.rudasfurdo.hu/en" target="_blank">Rudas officiella sida</a><a href="https://www.google.com/maps/search/?api=1&query=Rudas+Thermal+Bath+Budapest" target="_blank">Öppna i Maps</a></div></div></article>
+      <article class="item"><div class="num">4</div><div><div class="item-top"><span class="time">Kväll</span><span class="tag">Valfritt</span></div><h3>Vila, middag och Donaukryssning</h3><p>Lägg kryssningen efter middagen om energin finns. Boka bara om väder och tider passar.</p><div class="links"><a href="https://www.google.com/search?q=Budapest+official+Danube+cruise+evening" target="_blank">Sök avgångar</a></div></div></article>
+    </div>
+  </section>
+
+  <section class="day" id="son">
+    <div class="day-head"><div class="eyebrow">Söndag · Park + shopping</div><h2>Stadsparken och Arena Mall</h2><p>En rymlig dag med park på morgonen, shopping på eftermiddagen och fri kväll.</p></div>
+    <div class="schedule">
+      <article class="item"><div class="num">1</div><div><div class="item-top"><span class="time">Morgon</span><span class="tag">Promenad</span></div><h3>Hjältarnas torg</h3><p>Starta vid torget och fortsätt in i Stadsparken.</p><div class="links"><a href="https://www.google.com/maps/search/?api=1&query=Heroes%27+Square+Budapest" target="_blank">Öppna i Maps</a></div></div></article>
+      <article class="item"><div class="num">2</div><div><div class="item-top"><span class="time">Förmiddag</span><span class="tag">1–2 tim</span></div><h3>Vajdahunyad-slottet</h3><p>Gå genom parken till slottsområdet och ät lunch innan ni åker vidare.</p><div class="links"><a href="https://www.google.com/maps/dir/?api=1&origin=Heroes%27+Square+Budapest&destination=Vajdahunyad+Castle&travelmode=walking" target="_blank">Promenadrutt</a></div></div></article>
+      <article class="item"><div class="num">3</div><div><div class="item-top"><span class="time">13.30–17.00</span><span class="tag">3,5 tim</span></div><h3>Arena Mall</h3><p>Shoppingblocket ligger samlat så att resten av dagen inte behöver styras av butiker.</p><div class="links"><a href="https://www.arenamall.hu/en" target="_blank">Arena Mall</a><a href="https://www.google.com/maps/search/?api=1&query=Arena+Mall+Budapest" target="_blank">Öppna i Maps</a></div></div></article>
+      <article class="item"><div class="num">4</div><div><div class="item-top"><span class="time">Kväll</span><span class="tag">Valfritt</span></div><h3>Middag och judiska kvarteren</h3><p>Avsluta med en promenad i kvarteren och Szimpla Kert om ni vill ha mer kvällsliv.</p><div class="links"><a href="https://www.google.com/maps/search/?api=1&query=Szimpla+Kert+Budapest" target="_blank">Szimpla Kert</a></div></div></article>
+    </div>
+  </section>
+
+  <section class="day" id="man">
+    <div class="day-head"><div class="eyebrow">Måndag · Vidare</div><h2>Avresa mot Wien</h2><p>Håll morgonen enkel och lämna marginal för frukost, utcheckning och stationen.</p></div>
+    <div class="schedule">
+      <article class="item"><div class="num">1</div><div><div class="item-top"><span class="time">Morgon</span><span class="tag">Lugnt</span></div><h3>Frukost och utcheckning</h3><p>Kontrollera avgångsstation och tågläge kvällen före.</p></div></article>
+      <article class="item"><div class="num">2</div><div><div class="item-top"><span class="time">Därefter</span><span class="tag">Resa</span></div><h3>Tåg mot Wien</h3><p>Planera ankomst till stationen med god marginal.</p><div class="links"><a href="https://www.mavcsoport.hu/en" target="_blank">MÁV</a><a href="https://www.oebb.at/en/" target="_blank">ÖBB</a></div></div></article>
+    </div>
+  </section>
+
+  <section class="practical">
+    <div class="eyebrow">Praktiskt</div>
+    <h2>Bra att kontrollera</h2>
+    <div class="practical-list">
+      <div class="practical-row"><strong>72-timmarskort</strong><p>Cirka 175 kr per person. Kontrollera aktuellt pris före resan.</p><a href="https://bkk.hu/en/tickets-and-passes/prices/travelcards-valid-for-one-or-more-days/budapest-72-hour-travelcard.33/" target="_blank">BKK:s information</a></div>
+      <div class="practical-row"><strong>100E köps separat</strong><p>Flygbussen ingår normalt inte i vanliga periodkort.</p></div>
+      <div class="practical-row"><strong>Priserna är uppskattningar</strong><p>Spa, kollektivtrafik och växelkurs kan ändras. Kontrollera officiella sidor före bokning.</p></div>
+    </div>
+  </section>
+  <p class="footer">Budapesthelg · privat reseplanering</p>
+</main>
+<script>
+  const buttons=[...document.querySelectorAll('[data-day]')];
+  const days=[...document.querySelectorAll('.day')];
+  buttons.forEach(button=>button.addEventListener('click',()=>{
+    buttons.forEach(b=>b.classList.toggle('active',b===button));
+    days.forEach(day=>day.classList.toggle('active',day.id===button.dataset.day));
+    history.replaceState(null,'','#'+button.dataset.day);
+    window.scrollTo({top:document.querySelector('.tabs').offsetTop-8,behavior:'smooth'});
+  }));
+  const requested=location.hash.slice(1);
+  const initial=buttons.find(b=>b.dataset.day===requested);
+  if(initial) initial.click();
+</script>
+</body>
+</html>
