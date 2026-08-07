@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>Restauranger i Budapest – kort varsel och utan kött</title>
+  <style>
+    :root{--bg:#f7f6f2;--card:#fff;--text:#181817;--muted:#6d6b65;--line:#deddd7;--soft:#eeece6;--accent:#181817;--accentText:#fff;--good:#285f45;--goodBg:#edf5ef;--radius:14px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;overflow-x:hidden;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}.app{width:min(840px,100%);margin:auto;padding:14px 16px 64px}.site-nav{display:flex;align-items:center;gap:4px;width:max-content;max-width:100%;padding:4px;margin-bottom:24px;border:1px solid var(--line);border-radius:10px;background:var(--card)}.site-nav a{padding:7px 11px;border-radius:7px;color:var(--muted);font-size:12px;text-decoration:none}.site-nav a.active{background:var(--accent);color:var(--accentText)}.eyebrow,.meta,.tag{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;text-transform:uppercase;letter-spacing:.08em}.eyebrow{font-size:11px;color:var(--muted)}h1{max-width:700px;font-size:clamp(26px,6vw,42px);line-height:1.06;letter-spacing:-.04em;margin:8px 0 12px}h2{font-size:20px;letter-spacing:-.025em;margin:5px 0}.lead{max-width:650px;margin:0;color:var(--muted);font-size:15px}.notice{margin:20px 0;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);padding:14px 15px;font-size:13px}.notice strong{display:block;margin-bottom:4px}.notice p{margin:0;color:var(--muted)}.filters{position:sticky;top:0;z-index:10;display:flex;flex-wrap:wrap;gap:6px;padding:8px;margin:22px 0;background:rgba(247,246,242,.95);border:1px solid var(--line);border-radius:12px;backdrop-filter:blur(10px)}button{border:0;border-radius:8px;background:transparent;color:var(--muted);font:inherit;font-size:12px;padding:8px 10px;cursor:pointer}button.active{background:var(--accent);color:var(--accentText)}.section{margin-top:32px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:12px}.section-head p{margin:0;color:var(--muted);font-size:12px;text-align:right}.list{border:1px solid var(--line);border-radius:var(--radius);background:var(--card);overflow:hidden}.restaurant{padding:17px;border-bottom:1px solid var(--line)}.restaurant:last-child{border-bottom:0}.restaurant[hidden]{display:none}.restaurant-top{display:flex;align-items:start;justify-content:space-between;gap:12px}.restaurant h3{margin:0;font-size:17px;letter-spacing:-.015em}.sub{margin-top:3px;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px;text-transform:uppercase;letter-spacing:.05em}.chance{flex:none;border:1px solid var(--line);border-radius:999px;padding:4px 8px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:9px;text-transform:uppercase;letter-spacing:.06em}.chance.good{border-color:transparent;background:var(--goodBg);color:var(--good)}.desc{margin:12px 0 0;font-size:13px;color:var(--muted)}.diet{margin-top:11px;padding:10px 11px;border-left:2px solid var(--text);background:var(--soft);font-size:12px}.diet strong{font-weight:600}.tip{margin-top:9px;font-size:12px}.tip strong{font-weight:600}.actions{display:flex;flex-wrap:wrap;gap:7px;margin-top:13px}.actions a{display:inline-flex;align-items:center;gap:4px;border:1px solid var(--line);border-radius:8px;padding:7px 9px;background:var(--card);color:var(--text);font-size:12px;text-decoration:none}.actions a.primary{background:var(--accent);border-color:var(--accent);color:var(--accentText)}.actions a::after{content:"↗"}.empty{display:none;padding:28px;text-align:center;color:var(--muted);font-size:13px}.fine-note{margin:12px 0 0;color:var(--muted);font-size:12px}.footer{margin-top:34px;text-align:center;color:var(--muted);font-size:11px}@media(max-width:520px){.app{padding:12px 12px 48px}.site-nav{margin-bottom:20px}.filters{margin-left:-4px;margin-right:-4px}.section-head{display:block}.section-head p{margin-top:4px;text-align:left}.restaurant{padding:15px 13px}.restaurant-top{display:block}.chance{display:inline-block;margin-top:8px}.actions a{flex:1 1 auto;justify-content:center}.diet{padding:9px 10px}}@media(prefers-color-scheme:dark){:root{--bg:#151514;--card:#1c1c1a;--text:#f2f1ec;--muted:#aaa79f;--line:#35342f;--soft:#24231f;--accent:#f2f1ec;--accentText:#181817;--good:#b7e0c5;--goodBg:#203329}.filters{background:rgba(21,21,20,.95)}}
+  </style>
+</head>
+<body>
+<main class="app">
+  <nav class="site-nav" aria-label="Huvudnavigering">
+    <a href="./">Helgplan</a>
+    <a href="restaurants.html" class="active">Restauranger</a>
+  </nav>
+
+  <header>
+    <div class="eyebrow">Budapest · restaurangguide för två</div>
+    <h1>Bra mat utan lång framförhållning</h1>
+    <p class="lead">Utvalda restauranger med fisk, vegetariskt eller veganskt – och en rimlig väg till bord samma dag eller dagen före.</p>
+  </header>
+
+  <aside class="notice">
+    <strong>Kort varsel är aldrig garanterat</strong>
+    <p>Prova först 17.30–18.00 eller efter 21.00, kontrollera online och ring sedan. För avsmakningsmenyer måste kostönskemål anges när ni bokar – räkna inte med att köket kan ändra menyn på plats.</p>
+  </aside>
+
+  <div class="filters" role="group" aria-label="Filtrera restauranger">
+    <button class="active" data-filter="all">Alla</button>
+    <button data-filter="quick">Bäst chans</button>
+    <button data-filter="near">Nära hotellet</button>
+    <button data-filter="veg">Extra grönt</button>
+    <button data-filter="fine">Fine dining</button>
+  </div>
+
+  <section class="section" data-section="regular">
+    <div class="section-head">
+      <div><div class="eyebrow">Börja här</div><h2>Bäst kombination av kvalitet och chans</h2></div>
+      <p>Onlinebokning eller telefon samma dag</p>
+    </div>
+    <div class="list">
+      <article class="restaurant" data-tags="quick near veg">
+        <div class="restaurant-top"><div><h3>Két Szerecsen</h3><div class="sub">Nagymező utca 14 · bistro · €€</div></div><span class="chance good">Bäst chans</span></div>
+        <p class="desc">Välrenommerad parisisk-ungersk bistro nära hotellet, öppen från morgon till sen kväll.</p>
+        <div class="diet"><strong>Utan kött:</strong> aktuell meny har tonfisktartar, gul saffransrisotto med burrata och hel guldbraxen/orata.</div>
+        <div class="tip"><strong>Kort varsel:</strong> restaurangen ber gäster ringa om bokningen är inom 24 timmar.</div>
+        <div class="actions"><a class="primary" href="tel:+3613431984">Ring nu</a><a href="https://www.ketszerecsen.hu/" target="_blank">Meny</a><a href="https://www.google.com/maps/search/?api=1&query=K%C3%A9t+Szerecsen+Budapest" target="_blank">Karta</a></div>
+      </article>
+
+      <article class="restaurant" data-tags="quick near veg">
+        <div class="restaurant-top"><div><h3>Menza</h3><div class="sub">Liszt Ferenc tér 2 · modern ungersk · €€</div></div><span class="chance good">Bäst chans</span></div>
+        <p class="desc">Stor, livlig och pålitlig restaurang nära hotellet. Bra reservplan när mindre matsalar är fulla.</p>
+        <div class="diet"><strong>Utan kött:</strong> separat fiskkategori, bland annat gös-fish & chips, plus vegetarisk lunch och flera sallader/pastarätter.</div>
+        <div class="tip"><strong>Kort varsel:</strong> onlinebokning för upp till 4 personer; prova även sen middag.</div>
+        <div class="actions"><a class="primary" href="https://www.menzaetterem.hu/asztalfoglalas/" target="_blank">Boka bord</a><a href="https://www.menzaetterem.hu/etlap/" target="_blank">Meny</a><a href="https://www.google.com/maps/search/?api=1&query=Menza+Budapest" target="_blank">Karta</a></div>
+      </article>
+
+      <article class="restaurant" data-tags="quick veg">
+        <div class="restaurant-top"><div><h3>Dobrumba</h3><div class="sub">Dob utca 5 · Mellanöstern/Medelhavet · €€</div></div><span class="chance good">Bra chans</span></div>
+        <p class="desc">Smårätter att dela i judiska kvarteren. En av de enklaste menyerna för ett par med olika kostönskemål.</p>
+        <div class="diet"><strong>Utan kött:</strong> tydligt märkta vegetariska och veganska rätter: mezze, hummus, shakshuka, rostad blomkål och svampshawarma. Även gambas.</div>
+        <div class="tip"><strong>Kort varsel:</strong> öppen dagligen 12.00–23.30 och har direkt onlinebokning.</div>
+        <div class="actions"><a class="primary" href="https://book.dinnerbooking.com/hu/hu-HU/book/table/pax/3897/2" target="_blank">Boka bord</a><a href="https://dobrumba.hu/en/menu/" target="_blank">Meny</a><a href="https://www.google.com/maps/search/?api=1&query=Dobrumba+Budapest" target="_blank">Karta</a></div>
+      </article>
+
+      <article class="restaurant" data-tags="quick near veg">
+        <div class="restaurant-top"><div><h3>Twentysix</h3><div class="sub">Király utca 26 · Medelhavet · €€€</div></div><span class="chance good">Bra chans</span></div>
+        <p class="desc">Stor urban trädgård med snygg miljö och bred medelhavsmeny – bra när ni vill ha en upplevelse utan avsmakningsmeny.</p>
+        <div class="diet"><strong>Utan kött:</strong> grönsaksdrivna sharing-rätter, fisk och vegetariska alternativ på den aktuella dagsmenyn.</div>
+        <div class="tip"><strong>Kort varsel:</strong> stor lokal och löpande onlinebokning; kontrollera både tidig och sen sittning.</div>
+        <div class="actions"><a class="primary" href="https://twentysixbudapest.com/" target="_blank">Boka bord</a><a href="https://twentysixbudapest.com/menu/" target="_blank">Meny</a><a href="https://www.google.com/maps/search/?api=1&query=Twentysix+Budapest" target="_blank">Karta</a></div>
+      </article>
+
+      <article class="restaurant" data-tags="quick near">
+        <div class="restaurant-top"><div><h3>Trattoria Pomo D’Oro</h3><div class="sub">Arany János utca 9 · italiensk · €€€</div></div><span class="chance">Ring samma dag</span></div>
+        <p class="desc">Klassisk och mycket omtyckt italiensk trattoria nära basilikan, med stor meny och livlig matsal.</p>
+        <div class="diet"><strong>Utan kött:</strong> fisk och skaldjur, pasta, risotto, pizza och vegetariska förrätter gör det enkelt att välja separat.</div>
+        <div class="tip"><strong>Kort varsel:</strong> bokning sker främst via telefon; fråga efter avbokningar eller en sen sittning.</div>
+        <div class="actions"><a class="primary" href="tel:+3613026473">Ring nu</a><a href="https://pomodorobudapest.com/etlap" target="_blank">Meny</a><a href="https://www.google.com/maps/search/?api=1&query=Trattoria+Pomo+D%27Oro+Budapest" target="_blank">Karta</a></div>
+      </article>
+
+      <article class="restaurant" data-tags="quick veg">
+        <div class="restaurant-top"><div><h3>Pingrumba</h3><div class="sub">Széll Kálmán tér 6 · Buda · €€</div></div><span class="chance good">Bra chans</span></div>
+        <p class="desc">Avslappnad systerrestaurang till Dobrumba på Budasidan, bra efter Fiskarbastionen eller före kväll i Buda.</p>
+        <div class="diet"><strong>Utan kött:</strong> uttalat grönsaksdriven meny med många vegetariska, veganska och glutenfria rätter.</div>
+        <div class="tip"><strong>Kort varsel:</strong> stor delningsmeny och bokningsknapp på den officiella sidan.</div>
+        <div class="actions"><a class="primary" href="https://pingrumba.hu/en/" target="_blank">Boka bord</a><a href="https://pingrumba.hu/en/menu/" target="_blank">Meny</a><a href="https://www.google.com/maps/search/?api=1&query=Pingrumba+Budapest" target="_blank">Karta</a></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" data-section="special">
+    <div class="section-head">
+      <div><div class="eyebrow">Finare middag</div><h2>Värt att kontrollera direkt</h2></div>
+      <p>Bättre mat, mindre matsalar</p>
+    </div>
+    <div class="list">
+      <article class="restaurant" data-tags="near fine">
+        <div class="restaurant-top"><div><h3>Hoppá! Bistro</h3><div class="sub">Október 6. utca 15 · Michelin Guide · €€€</div></div><span class="chance">Värt ett försök</span></div>
+        <p class="desc">Modern ungersk-fransk bistro i centrum, erkänd av Michelin Guide men mindre formell än en avsmakningsrestaurang.</p>
+        <div class="diet"><strong>Utan kött:</strong> aktuell meny har rökt stör, öring, havskatt samt getost med grönsallad.</div>
+        <div class="tip"><strong>Kort varsel:</strong> kontrollera SevenRooms; lunch eller öppningstid ger normalt bättre chans än 19.30.</div>
+        <div class="actions"><a class="primary" href="https://www.sevenrooms.com/explore/hoppbistro/reservations/create/search/" target="_blank">Se tider</a><a href="https://www.hoppabistro.hu/etlap/" target="_blank">Meny</a><a href="https://www.google.com/maps/search/?api=1&query=Hoppa+Bistro+Budapest" target="_blank">Karta</a></div>
+      </article>
+
+      <article class="restaurant" data-tags="fine">
+        <div class="restaurant-top"><div><h3>Stand25 Bistro</h3><div class="sub">Attila út 10 · Michelin Guide · €€€</div></div><span class="chance">Värt ett försök</span></div>
+        <p class="desc">Kvalitetsdriven, avslappnad ungersk bistro på Budasidan av Szabina Szulló och Tamás Széll.</p>
+        <div class="diet"><strong>Utan kött:</strong> aktuell à la carte har tonfisksallad, lax, havsbraxen och zucchini/getost. 3-rättersmenyn kan byggas med tonfisk och lax.</div>
+        <div class="tip"><strong>Kort varsel:</strong> prova lunch eller ring efter en avbokning om SevenRooms är fullt.</div>
+        <div class="actions"><a class="primary" href="https://www.sevenrooms.com/explore/stand25bisztro/reservations/create/search/?lang=en" target="_blank">Se tider</a><a href="https://stand25.hu/?lang=en" target="_blank">Meny</a><a href="tel:+36309613262">Ring</a></div>
+      </article>
+
+      <article class="restaurant" data-tags="fine veg">
+        <div class="restaurant-top"><div><h3>TATI</h3><div class="sub">Dohány utca 58–62 · farm-to-table · €€€</div></div><span class="chance">Värt ett försök</span></div>
+        <p class="desc">Michelin-rekommenderad farm-to-table-restaurang med modern ungersk mat och starkt fokus på säsongens råvaror.</p>
+        <div class="diet"><strong>Utan kött:</strong> restaurangen erbjuder en särskilt utvecklad vegansk avsmakningsmeny, inte bara bortplockade kötträtter.</div>
+        <div class="tip"><strong>Kort varsel:</strong> kontrollera vanlig middag, vardagslunch och helgbrunch – de ger fler möjliga sittningar.</div>
+        <div class="actions"><a class="primary" href="https://tatibudapest.com/" target="_blank">Boka bord</a><a href="https://tatibudapest.com/menu/" target="_blank">Menyer</a><a href="https://www.google.com/maps/search/?api=1&query=TATI+Budapest" target="_blank">Karta</a></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" data-section="fine">
+    <div class="section-head">
+      <div><div class="eyebrow">Avsmakningsmeny</div><h2>Leta efter återbud</h2></div>
+      <p>Bekräfta kostönskemål vid bokning</p>
+    </div>
+    <div class="list">
+      <article class="restaurant" data-tags="fine veg">
+        <div class="restaurant-top"><div><h3>Laurel Budapest</h3><div class="sub">Kertész utca 29 · fine dining · €€€€</div></div><span class="chance">Återbud</span></div>
+        <p class="desc">Säsongsbaserad avsmakningsmeny i en intim matsal; helglunch är en kortare och ofta mer praktisk version.</p>
+        <div class="diet"><strong>Utan kött:</strong> en komplett vegansk avsmakningsmeny erbjuds parallellt med den traditionella menyn.</div>
+        <div class="tip"><strong>Kort varsel:</strong> kontrollera särskilt lördag/söndag lunch. Officiellt angivet pris: 39 500 HUF för middag, 28 500 HUF för helglunch.</div>
+        <div class="actions"><a class="primary" href="https://laurelbudapest.hu/en/" target="_blank">Boka/Se tider</a><a href="https://laurelbudapest.hu/en/menu/" target="_blank">Meny</a><a href="https://www.google.com/maps/search/?api=1&query=Laurel+Budapest" target="_blank">Karta</a></div>
+      </article>
+
+      <article class="restaurant" data-tags="fine veg">
+        <div class="restaurant-top"><div><h3>SALT Budapest</h3><div class="sub">Királyi Pál utca 4 · Michelin-stjärna · €€€€</div></div><span class="chance">Återbud</span></div>
+        <p class="desc">Ambitiös 14-rättersmeny med ungerska rötter, fermentering och hållbarhetsfokus.</p>
+        <div class="diet"><strong>Utan kött:</strong> hela menyn finns uttryckligen i vegetarisk och vegansk version. Valet måste anges vid bokning.</div>
+        <div class="tip"><strong>Kort varsel:</strong> dyrt och svårt, men bokningskalendern kan visa sena återbud. Officiellt pris: 69 500 HUF per person.</div>
+        <div class="actions"><a class="primary" href="https://saltbudapest.com/reservations/" target="_blank">Se tider</a><a href="https://saltbudapest.com/menu/" target="_blank">Meny</a><a href="https://www.google.com/maps/search/?api=1&query=SALT+Budapest" target="_blank">Karta</a></div>
+      </article>
+
+      <article class="restaurant" data-tags="fine veg">
+        <div class="restaurant-top"><div><h3>Babel Budapest</h3><div class="sub">Piarista köz 2 · Michelin-stjärna · €€€€</div></div><span class="chance">Återbud</span></div>
+        <p class="desc">Fine dining med centraleuropeisk identitet och en lång, kreativ avsmakningsmeny.</p>
+        <div class="diet"><strong>Utan kött:</strong> Babel uppger att vegansk meny finns på begäran och att vegetariska/pescetariska behov kan hanteras när de anges vid bokning.</div>
+        <div class="tip"><strong>Kort varsel:</strong> kontrollera online, men skriv alltid “pescatarian/no meat” i bokningen och invänta bekräftelse.</div>
+        <div class="actions"><a class="primary" href="https://www.babel-budapest.hu/en/reservation/" target="_blank">Se tider</a><a href="https://babel-budapest.hu/en/menus" target="_blank">Meny</a><a href="https://www.google.com/maps/search/?api=1&query=Babel+Budapest" target="_blank">Karta</a></div>
+      </article>
+    </div>
+    <p class="fine-note">För SALT, Laurel och Babel bör båda välja respektive restaurangs anpassade meny om köket kräver samma meny för hela bordet. Bekräfta detta före betalning eller deposition.</p>
+  </section>
+
+  <div class="empty" id="empty">Inga restauranger matchar filtret.</div>
+  <p class="footer">Kontrollerat mot restaurangernas officiella menyer och bokningssidor · priser och rätter kan ändras</p>
+</main>
+<script>
+  const buttons=[...document.querySelectorAll('[data-filter]')];
+  const cards=[...document.querySelectorAll('.restaurant')];
+  const sections=[...document.querySelectorAll('[data-section]')];
+  const empty=document.getElementById('empty');
+  function apply(filter){
+    let total=0;
+    cards.forEach(card=>{const show=filter==='all'||card.dataset.tags.split(' ').includes(filter);card.hidden=!show;if(show)total++;});
+    sections.forEach(section=>{const visible=[...section.querySelectorAll('.restaurant')].some(card=>!card.hidden);section.hidden=!visible;});
+    empty.style.display=total?'none':'block';
+    buttons.forEach(button=>button.classList.toggle('active',button.dataset.filter===filter));
+    history.replaceState(null,'',filter==='all'?'restaurants.html':'#'+filter);
+  }
+  buttons.forEach(button=>button.addEventListener('click',()=>apply(button.dataset.filter)));
+  const initial=location.hash.slice(1);if(buttons.some(button=>button.dataset.filter===initial))apply(initial);
+</script>
+</body>
+</html>
