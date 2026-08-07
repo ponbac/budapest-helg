@@ -3,42 +3,66 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#f7f6f2">
+  <meta name="theme-color" content="#fff8ef">
   <title>Budapesthelg – Rudas och stadsschema</title>
   <style>
     :root{--bg:#f7f6f2;--card:#fff;--text:#181817;--muted:#6d6b65;--line:#deddd7;--soft:#eeece6;--accent:#181817;--accentText:#fff;--radius:14px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;overflow-x:hidden;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}.app{width:min(760px,100%);margin:auto;padding:14px 16px 64px}.site-nav{display:flex;align-items:center;gap:4px;width:max-content;max-width:100%;padding:4px;margin-bottom:24px;border:1px solid var(--line);border-radius:10px;background:var(--card)}.site-nav a{padding:7px 11px;border-radius:7px;color:var(--muted);font-size:12px;text-decoration:none}.site-nav a.active{background:var(--accent);color:var(--accentText)}.eyebrow,.meta,.tag{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;text-transform:uppercase;letter-spacing:.08em}.eyebrow{font-size:11px;color:var(--muted)}h1{font-size:clamp(24px,6vw,38px);line-height:1.08;letter-spacing:-.035em;margin:8px 0 10px}h2{font-size:20px;letter-spacing:-.02em;margin:6px 0}.lead{margin:0;color:var(--muted);font-size:15px}.summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin:22px 0}.metric{min-width:0;border:1px solid var(--line);border-radius:var(--radius);padding:12px;background:rgba(255,255,255,.55)}.metric .meta{font-size:9px;color:var(--muted)}.metric strong{display:block;margin-top:6px;font-size:17px;font-weight:600}.tabs{position:sticky;top:0;z-index:10;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:6px;background:rgba(247,246,242,.94);border:1px solid var(--line);border-radius:12px;backdrop-filter:blur(10px)}button{font:inherit;border:0;border-radius:8px;padding:9px 4px;background:transparent;color:var(--muted);cursor:pointer}button.active{background:var(--accent);color:var(--accentText)}button span{display:block;font-size:12px}button small{display:block;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:9px;opacity:.7;margin-top:1px}.day{display:none}.day.active{display:block}.day-head{padding:28px 2px 16px}.day-head p{margin:5px 0 0;color:var(--muted);font-size:14px}.schedule{border:1px solid var(--line);border-radius:var(--radius);background:var(--card);overflow:hidden}.item{display:grid;grid-template-columns:32px minmax(0,1fr);gap:12px;padding:17px 15px;border-bottom:1px solid var(--line)}.item:last-child{border-bottom:0}.item.feature{background:var(--soft)}.num{width:28px;height:28px;border:1px solid var(--line);border-radius:8px;display:grid;place-items:center;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--muted)}.item-top{display:flex;justify-content:space-between;gap:10px;align-items:start}.time{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:var(--muted)}.tag{font-size:9px;border:1px solid var(--line);border-radius:999px;padding:3px 7px;white-space:nowrap}.item h3{font-size:15px;margin:8px 0 3px}.item p{font-size:13px;color:var(--muted);margin:0}.links{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}.links a,.practical a{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--line);border-radius:8px;padding:7px 9px;color:var(--text);text-decoration:none;font-size:12px;background:var(--card)}.feature .links a:first-child{background:var(--accent);color:var(--accentText);border-color:var(--accent)}.links a::after,.practical a::after{content:"↗"}.practical{margin-top:30px}.practical-list{border:1px solid var(--line);border-radius:var(--radius);background:var(--card);overflow:hidden}.practical-row{padding:14px 15px;border-bottom:1px solid var(--line)}.practical-row:last-child{border:0}.practical-row strong{font-size:14px}.practical-row p{font-size:12px;color:var(--muted);margin:4px 0 8px}.footer{margin-top:26px;color:var(--muted);font-size:11px;text-align:center}@media(max-width:430px){.app{padding:16px 12px 48px}.summary{grid-template-columns:repeat(2,minmax(0,1fr))}.metric:last-child{grid-column:span 2}.tabs small{display:none}.item{padding:15px 12px}.item-top{align-items:center}}@media(prefers-color-scheme:dark){:root{--bg:#151514;--card:#1c1c1a;--text:#f2f1ec;--muted:#aaa79f;--line:#35342f;--soft:#24231f;--accent:#f2f1ec;--accentText:#181817}.tabs{background:rgba(21,21,20,.94)}.metric{background:rgba(28,28,26,.62)}}
   </style>
+  <link rel="stylesheet" href="theme.css">
 </head>
-<body>
+<body class="itinerary-page">
 <main class="app">
   <nav class="site-nav" aria-label="Huvudnavigering">
-    <a href="./" class="active">Helgplan</a>
-    <a href="restaurants.html">Restauranger</a>
+    <a href="./" class="active">🗓️ Helgplan</a>
+    <a href="restaurants.html">🍽️ Restauranger</a>
   </nav>
-  <header>
-    <div class="eyebrow">Budapest · 3 nätter · fredag–måndag</div>
-    <h1>En lugn helg med Rudas</h1>
-    <p class="lead">Ett spa, tydliga block och gott om återhämtning.</p>
+  <header class="hero hero-plan">
+    <div class="eyebrow">🇭🇺 Budapest · 3 nätter · fredag–måndag</div>
+    <h1>En långhelg i Budapest</h1>
+    <p class="lead">Termalbad, stadspromenader, vinbarer och gott om tid att bara vara lediga.</p>
+    <div class="hero-vibes"><span>♨️ Rudas</span><span>🍷 vinbarer</span><span>🏛️ stadsliv</span><span>🚕 enkelt med Uber</span></div>
     <div class="summary">
-      <div class="metric"><span class="meta">Spa · 2 pers</span><strong>≈ 900 kr</strong></div>
-      <div class="metric"><span class="meta">Transport</span><strong>Uber + gång</strong></div>
-      <div class="metric"><span class="meta">Tempo</span><strong>Lugnt</strong></div>
+      <div class="metric"><span class="meta">♨️ Spa · 2 pers</span><strong>≈ 900 kr</strong></div>
+      <div class="metric"><span class="meta">🚕 Transport</span><strong>Uber + gång</strong></div>
+      <div class="metric"><span class="meta">🌿 Tempo</span><strong>Lugnt</strong></div>
     </div>
   </header>
+  <section class="postcards" aria-label="Budapest i bilder">
+    <figure class="postcard">
+      <img src="assets/parliament.webp" alt="Ungerns parlament vid Donau i Budapest" width="1200" height="900" fetchpriority="high">
+      <figcaption>Donau & parlamentet <span><a href="https://commons.wikimedia.org/wiki/File:Parliament_Building,_Danube,_Budapest_2010_-_panoramio.jpg" target="_blank">Zdvihak · CC BY 3.0</a></span></figcaption>
+    </figure>
+    <figure class="postcard">
+      <img src="assets/fishermans-bastion.webp" alt="Fiskarbastionen med utsikt över Budapest" width="1200" height="626" loading="lazy" decoding="async">
+      <figcaption>Fiskarbastionen <span><a href="https://commons.wikimedia.org/wiki/File:Budapest-Panorama-Fischerbastei-Donau.jpg" target="_blank">Daniel Pauls · CC BY 3.0</a></span></figcaption>
+    </figure>
+    <figure class="postcard">
+      <img src="assets/rudas.webp" alt="Rudasbadet och Gellértberget i Budapest" width="1200" height="900" loading="lazy" decoding="async">
+      <figcaption>Rudasbadet <span><a href="https://commons.wikimedia.org/wiki/File:Rudas_Baths_central_part_and_Gellert_Hill_in_Tab%C3%A1n,_2016_Budapest.jpg" target="_blank">Globetrotter19 · CC BY-SA 3.0</a></span></figcaption>
+    </figure>
+    <figure class="postcard">
+      <img src="assets/heroes-square.webp" alt="Hjältarnas torg i Budapest" width="1200" height="900" loading="lazy" decoding="async">
+      <figcaption>Hjältarnas torg <span><a href="https://commons.wikimedia.org/wiki/File:H%C5%91s%C3%B6k_tere_20180613_130432300.jpg" target="_blank">Vauia Rex · CC0</a></span></figcaption>
+    </figure>
+    <figure class="postcard">
+      <img src="assets/vajdahunyad.webp" alt="Vajdahunyad-slottet i Stadsparken" width="1199" height="900" loading="lazy" decoding="async">
+      <figcaption>Vajdahunyad <span><a href="https://commons.wikimedia.org/wiki/File:Budapest_Burg_Vajdahunyad_04.JPG" target="_blank">Zairon · CC BY-SA 3.0</a></span></figcaption>
+    </figure>
+  </section>
   <nav class="tabs" aria-label="Välj dag">
-    <button class="active" data-day="fre"><span>Fredag</span><small>Ankomst</small></button>
-    <button data-day="lor"><span>Lördag</span><small>Buda + spa</small></button>
-    <button data-day="son"><span>Söndag</span><small>Park + shopping</small></button>
-    <button data-day="man"><span>Måndag</span><small>Vidare</small></button>
+    <button class="active" data-day="fre"><span>✈️ Fredag</span><small>Ankomst</small></button>
+    <button data-day="lor"><span>♨️ Lördag</span><small>Buda + spa</small></button>
+    <button data-day="son"><span>🌳 Söndag</span><small>Park + shopping</small></button>
+    <button data-day="man"><span>🚆 Måndag</span><small>Vidare</small></button>
   </nav>
 
   <section class="day active" id="fre">
     <div class="day-head"><div class="eyebrow">Fredag · Ankomst</div><h2>Centrum och Donau</h2><p>En mjuk start nära hotellet med promenad och middag i centrum.</p></div>
     <div class="schedule">
-      <article class="item"><div class="num">1</div><div><div class="item-top"><span class="time">13.00</span><span class="tag">Resa</span></div><h3>Flyg och Uber till hotellet</h3><p>Beställ en licensierad lokal taxi i Uber-appen efter landning. Prisuppskattning och kortbetalning visas i appen.</p><div class="links"><a href="https://www.uber.com/hu/en/r/cities/taxi/budapest-budapest-hu/" target="_blank">Uber i Budapest</a><a href="https://m.uber.com/looking" target="_blank">Se pris</a></div></div></article>
-      <article class="item"><div class="num">2</div><div><div class="item-top"><span class="time">Eftermiddag</span><span class="tag">Incheckning</span></div><h3>Hotel Moments Budapest</h3><p>Incheckning och en kort paus innan ni går vidare.</p><div class="links"><a href="https://www.google.com/maps/search/?api=1&query=Hotel+Moments+Budapest" target="_blank">Öppna i Maps</a><a href="https://hotelmomentsbudapest.hu/" target="_blank">Hotellets webbplats</a></div></div></article>
-      <article class="item feature"><div class="num">3</div><div><div class="item-top"><span class="time">Efter incheckning</span><span class="tag">Vinbutik</span></div><h3>Bortársaság Andrássy</h3><p>En finare specialbutik för ungerskt vin och bubbel på Andrássy út 41. Det är ett aktuellt alternativ som finns i kedjans officiella butikslista. Adressen Szent István tér 11 i bilden finns inte med där.</p><div class="links"><a href="https://www.bortarsasag.hu/en/wine-stores/andrassy" target="_blank">Butik och öppettider</a><a href="https://www.google.com/maps/dir/?api=1&origin=Hotel+Moments+Budapest&destination=Bort%C3%A1rsas%C3%A1g+Andr%C3%A1ssy%2C+Andr%C3%A1ssy+%C3%BAt+41%2C+Budapest&travelmode=walking" target="_blank">Gångväg från hotellet</a></div></div></article>
-      <article class="item"><div class="num">4</div><div><div class="item-top"><span class="time">Kväll</span><span class="tag">Promenad + vinbar</span></div><h3>Basilikan, Donau och DiVino</h3><p>Promenera via Sankt Stefansbasilikan till parlamentet och Skorna vid Donau. DiVino Bazilika passar som första eller sista stopp före middagen.</p><div class="links"><a href="https://www.google.com/maps/dir/?api=1&origin=Hotel+Moments+Budapest&destination=Shoes+on+the+Danube+Bank&waypoints=DiVino+Bazilika%7CHungarian+Parliament+Building&travelmode=walking" target="_blank">Promenadrutt</a><a href="https://bazilika.divino.hu/en/" target="_blank">DiVino</a></div></div></article>
+      <article class="item"><div class="num">1</div><div><div class="item-top"><span class="time">13.00</span><span class="tag">✈️ Resa</span></div><h3>Flyg och Uber till hotellet</h3><p>Beställ en licensierad lokal taxi i Uber-appen efter landning. Prisuppskattning och kortbetalning visas i appen.</p><div class="links"><a href="https://www.uber.com/hu/en/r/cities/taxi/budapest-budapest-hu/" target="_blank">Uber i Budapest</a><a href="https://m.uber.com/looking" target="_blank">Se pris</a></div></div></article>
+      <article class="item"><div class="num">2</div><div><div class="item-top"><span class="time">Eftermiddag</span><span class="tag">🛎️ Incheckning</span></div><h3>Hotel Moments Budapest</h3><p>Incheckning och en kort paus innan ni går vidare.</p><div class="links"><a href="https://www.google.com/maps/search/?api=1&query=Hotel+Moments+Budapest" target="_blank">Öppna i Maps</a><a href="https://hotelmomentsbudapest.hu/" target="_blank">Hotellets webbplats</a></div></div></article>
+      <article class="item feature"><div class="num">3</div><div><div class="item-top"><span class="time">Efter incheckning</span><span class="tag">🥂 Vinbutik</span></div><h3>Bortársaság Andrássy</h3><p>En finare specialbutik för ungerskt vin och bubbel på Andrássy út 41. Det är ett aktuellt alternativ som finns i kedjans officiella butikslista. Adressen Szent István tér 11 i bilden finns inte med där.</p><div class="links"><a href="https://www.bortarsasag.hu/en/wine-stores/andrassy" target="_blank">Butik och öppettider</a><a href="https://www.google.com/maps/dir/?api=1&origin=Hotel+Moments+Budapest&destination=Bort%C3%A1rsas%C3%A1g+Andr%C3%A1ssy%2C+Andr%C3%A1ssy+%C3%BAt+41%2C+Budapest&travelmode=walking" target="_blank">Gångväg från hotellet</a></div></div></article>
+      <article class="item"><div class="num">4</div><div><div class="item-top"><span class="time">Kväll</span><span class="tag">🍷 Promenad + vinbar</span></div><h3>Basilikan, Donau och DiVino</h3><p>Promenera via Sankt Stefansbasilikan till parlamentet och Skorna vid Donau. DiVino Bazilika passar som första eller sista stopp före middagen.</p><div class="links"><a href="https://www.google.com/maps/dir/?api=1&origin=Hotel+Moments+Budapest&destination=Shoes+on+the+Danube+Bank&waypoints=DiVino+Bazilika%7CHungarian+Parliament+Building&travelmode=walking" target="_blank">Promenadrutt</a><a href="https://bazilika.divino.hu/en/" target="_blank">DiVino</a></div></div></article>
     </div>
   </section>
 
@@ -46,7 +70,7 @@
     <div class="day-head"><div class="eyebrow">Lördag · Buda + spa</div><h2>Slottskvarteren och Rudas</h2><p>Helgens huvuddag: utsikter i Buda följt av ett långt, lugnt spabesök.</p></div>
     <div class="schedule">
       <article class="item"><div class="num">1</div><div><div class="item-top"><span class="time">Tidig morgon</span><span class="tag">2–3 tim</span></div><h3>Fiskarbastionen och Mattiaskyrkan</h3><p>Börja tidigt för lugnare gränder och bättre plats vid utsiktspunkterna.</p><div class="links"><a href="https://www.google.com/maps/search/?api=1&query=Fisherman%27s+Bastion+Budapest" target="_blank">Öppna i Maps</a><a href="https://matyas-templom.hu/" target="_blank">Mattiaskyrkan</a></div></div></article>
-      <article class="item"><div class="num">2</div><div><div class="item-top"><span class="time">Förmiddag</span><span class="tag">Promenad</span></div><h3>Budaslottet</h3><p>Fortsätt söderut genom slottsområdet och ta lunch innan badet.</p><div class="links"><a href="https://www.google.com/maps/dir/?api=1&origin=Fisherman%27s+Bastion&destination=Rudas+Thermal+Bath&waypoints=Buda+Castle&travelmode=walking" target="_blank">Rutt genom Buda</a></div></div></article>
+      <article class="item"><div class="num">2</div><div><div class="item-top"><span class="time">Förmiddag</span><span class="tag">🚶 Promenad</span></div><h3>Budaslottet</h3><p>Fortsätt söderut genom slottsområdet och ta lunch innan badet.</p><div class="links"><a href="https://www.google.com/maps/dir/?api=1&origin=Fisherman%27s+Bastion&destination=Rudas+Thermal+Bath&waypoints=Buda+Castle&travelmode=walking" target="_blank">Rutt genom Buda</a></div></div></article>
       <article class="item feature"><div class="num">3</div><div><div class="item-top"><span class="time">13.00–16.30</span><span class="tag">3,5 tim</span></div><h3>Rudasbadet</h3><p>Helgens enda spa. Cirka 450 kr per person beroende på dag, paket och växelkurs.</p><div class="links"><a href="https://www.rudasfurdo.hu/en" target="_blank">Rudas officiella sida</a><a href="https://www.google.com/maps/search/?api=1&query=Rudas+Thermal+Bath+Budapest" target="_blank">Öppna i Maps</a></div></div></article>
       <article class="item"><div class="num">4</div><div><div class="item-top"><span class="time">Kväll</span><span class="tag">Välj ett</span></div><h3>Kadarka eller Donaukryssning</h3><p>Efter vila och middag: välj den avslappnade Kadarka Wine Bar eller en kvällskryssning, beroende på energi och väder.</p><div class="links"><a href="https://kadarkawinebar.com/" target="_blank">Kadarka</a><a href="https://www.google.com/search?q=Budapest+official+Danube+cruise+evening" target="_blank">Sök kryssning</a></div></div></article>
     </div>
@@ -55,10 +79,10 @@
   <section class="day" id="son">
     <div class="day-head"><div class="eyebrow">Söndag · Park + shopping</div><h2>Stadsparken och Arena Mall</h2><p>En rymlig dag med park på morgonen, shopping på eftermiddagen och fri kväll.</p></div>
     <div class="schedule">
-      <article class="item"><div class="num">1</div><div><div class="item-top"><span class="time">Morgon</span><span class="tag">Promenad</span></div><h3>Hjältarnas torg</h3><p>Starta vid torget och fortsätt in i Stadsparken.</p><div class="links"><a href="https://www.google.com/maps/search/?api=1&query=Heroes%27+Square+Budapest" target="_blank">Öppna i Maps</a></div></div></article>
+      <article class="item"><div class="num">1</div><div><div class="item-top"><span class="time">Morgon</span><span class="tag">🚶 Promenad</span></div><h3>Hjältarnas torg</h3><p>Starta vid torget och fortsätt in i Stadsparken.</p><div class="links"><a href="https://www.google.com/maps/search/?api=1&query=Heroes%27+Square+Budapest" target="_blank">Öppna i Maps</a></div></div></article>
       <article class="item"><div class="num">2</div><div><div class="item-top"><span class="time">Förmiddag</span><span class="tag">1–2 tim</span></div><h3>Vajdahunyad-slottet</h3><p>Gå genom parken till slottsområdet och ät lunch innan ni åker vidare.</p><div class="links"><a href="https://www.google.com/maps/dir/?api=1&origin=Heroes%27+Square+Budapest&destination=Vajdahunyad+Castle&travelmode=walking" target="_blank">Promenadrutt</a></div></div></article>
       <article class="item"><div class="num">3</div><div><div class="item-top"><span class="time">13.30–17.00</span><span class="tag">3,5 tim</span></div><h3>Arena Mall</h3><p>Shoppingblocket ligger samlat så att resten av dagen inte behöver styras av butiker.</p><div class="links"><a href="https://www.arenamall.hu/en" target="_blank">Arena Mall</a><a href="https://www.google.com/maps/search/?api=1&query=Arena+Mall+Budapest" target="_blank">Öppna i Maps</a></div></div></article>
-      <article class="item"><div class="num">4</div><div><div class="item-top"><span class="time">Kväll</span><span class="tag">Vinbar</span></div><h3>DOBLO och judiska kvarteren</h3><p>Börja på stämningsfulla DOBLO på Dob utca 20 och fortsätt till Szimpla Kert om ni vill ha mer kvällsliv.</p><div class="links"><a href="https://doblo.hu/" target="_blank">DOBLO</a><a href="https://www.google.com/maps/dir/?api=1&origin=DOBLO+Wine+%26+Bar%2C+Dob+utca+20%2C+Budapest&destination=Szimpla+Kert%2C+Budapest&travelmode=walking" target="_blank">Kvällsrutt</a></div></div></article>
+      <article class="item"><div class="num">4</div><div><div class="item-top"><span class="time">Kväll</span><span class="tag">🍷 Vinbar</span></div><h3>DOBLO och judiska kvarteren</h3><p>Börja på stämningsfulla DOBLO på Dob utca 20 och fortsätt till Szimpla Kert om ni vill ha mer kvällsliv.</p><div class="links"><a href="https://doblo.hu/" target="_blank">DOBLO</a><a href="https://www.google.com/maps/dir/?api=1&origin=DOBLO+Wine+%26+Bar%2C+Dob+utca+20%2C+Budapest&destination=Szimpla+Kert%2C+Budapest&travelmode=walking" target="_blank">Kvällsrutt</a></div></div></article>
     </div>
   </section>
 
@@ -66,12 +90,12 @@
     <div class="day-head"><div class="eyebrow">Måndag · Vidare</div><h2>Avresa mot Wien</h2><p>Håll morgonen enkel och lämna marginal för frukost, utcheckning och stationen.</p></div>
     <div class="schedule">
       <article class="item"><div class="num">1</div><div><div class="item-top"><span class="time">Morgon</span><span class="tag">Lugnt</span></div><h3>Frukost och utcheckning</h3><p>Kontrollera avgångsstation och tågläge kvällen före.</p></div></article>
-      <article class="item"><div class="num">2</div><div><div class="item-top"><span class="time">Därefter</span><span class="tag">Resa</span></div><h3>Tåg mot Wien</h3><p>Planera ankomst till stationen med god marginal.</p><div class="links"><a href="https://www.mavcsoport.hu/en" target="_blank">MÁV</a><a href="https://www.oebb.at/en/" target="_blank">ÖBB</a></div></div></article>
+      <article class="item"><div class="num">2</div><div><div class="item-top"><span class="time">Därefter</span><span class="tag">✈️ Resa</span></div><h3>Tåg mot Wien</h3><p>Planera ankomst till stationen med god marginal.</p><div class="links"><a href="https://www.mavcsoport.hu/en" target="_blank">MÁV</a><a href="https://www.oebb.at/en/" target="_blank">ÖBB</a></div></div></article>
     </div>
   </section>
 
   <section class="practical">
-    <div class="eyebrow">Vinbarer · flexibla kvällsalternativ</div>
+    <div class="eyebrow">🍷 Vinbarer · flexibla kvällsalternativ</div>
     <h2>Tre ställen nära hotellet</h2>
     <div class="practical-list">
       <div class="practical-row"><strong>DiVino Bazilika · bäst på fredag</strong><p>Modern och livlig vinbar vid basilikan med ungerska viner från unga vinmakare och stor uteservering. Szent István tér 3.</p><a href="https://bazilika.divino.hu/en/" target="_blank">Officiell sida</a> <a href="https://www.google.com/maps/dir/?api=1&origin=Hotel+Moments+Budapest&destination=DiVino+Bazilika%2C+Szent+Istv%C3%A1n+t%C3%A9r+3%2C+Budapest&travelmode=walking" target="_blank">Gångväg</a></div>
@@ -81,7 +105,7 @@
   </section>
 
   <section class="practical">
-    <div class="eyebrow">Transport och praktiskt</div>
+    <div class="eyebrow">🚕 Transport och praktiskt</div>
     <h2>Uber fungerar smidigt</h2>
     <div class="practical-list">
       <div class="practical-row"><strong>Uber Taxi finns dygnet runt</strong><p>I Budapest beställer ni licensierade lokala taxibilar via Uber-appen. Appen visar prisuppskattning, föraruppgifter och resan i realtid.</p><a href="https://www.uber.com/hu/en/r/cities/taxi/budapest-budapest-hu/" target="_blank">Uber Budapest</a></div>
