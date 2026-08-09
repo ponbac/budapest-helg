@@ -386,6 +386,9 @@ button{font:inherit;cursor:pointer}
 .cruise-alert a{color:#6d4111;font-weight:700}
 .cruise-verdict{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(230px,.75fr);gap:14px;margin:28px 0;padding:22px;border:1px solid rgba(21,63,89,.13);border-radius:26px;background:linear-gradient(135deg,#eaf4f6,#fffaf2);box-shadow:var(--shadow)}
 .verdict-copy p,.verdict-alt p{margin:7px 0 0;color:var(--muted);font-size:13px}
+.booking-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin-top:14px}
+.booking-facts span{display:flex;flex-direction:column;min-width:0;padding:9px 11px;border:1px solid rgba(21,63,89,.11);border-radius:12px;background:rgba(255,255,255,.72);color:#153f59;font-size:12px;font-weight:700}
+.booking-facts b{margin-bottom:2px;color:var(--muted);font-size:8px;letter-spacing:.09em;text-transform:uppercase}
 .verdict-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
 .verdict-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:9px 13px;border:1px solid rgba(21,63,89,.18);border-radius:12px;background:#fff;color:#153f59;font-size:12px;font-weight:700;text-decoration:none}
 .verdict-actions a.primary{border-color:#153f59;background:#153f59;color:#fff}
@@ -394,6 +397,7 @@ button{font:inherit;cursor:pointer}
 .verdict-alt span{display:block;color:rgba(255,255,255,.7);font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
 .verdict-alt strong{display:block;margin-top:8px;font-family:'Fraunces',Georgia,serif;font-size:23px;line-height:1.1}
 .verdict-alt p{color:rgba(255,255,255,.78)}
+.verdict-alt .booking-caveat{margin-top:13px;padding-top:12px;border-top:1px solid rgba(255,255,255,.16);font-size:10px}
 .cruise-table-wrap{max-width:100%;overflow-x:auto;border:1px solid rgba(21,63,89,.12);border-radius:20px;background:var(--card);box-shadow:var(--shadow);scrollbar-width:thin}
 .cruise-table{width:100%;min-width:830px;border-collapse:collapse;font-size:12px}
 .cruise-table th,.cruise-table td{padding:13px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
