@@ -419,6 +419,13 @@ button{font:inherit;cursor:pointer}
 .cruise-facts span{padding:5px 8px;border-radius:999px;background:#edf5f7;color:#17465f;font-size:10px;font-weight:700}
 .cruise-fit{margin-top:12px;padding:11px 12px;border-radius:13px;background:var(--soft);color:#5f5047;font-size:11px}
 .cruise-fit strong{color:var(--text)}
+.more-options{margin-top:22px;border-color:rgba(21,63,89,.14);background:#edf5f7}
+.more-options::before{content:"➕"}
+.more-options strong{color:#153f59}
+.more-options ul{margin:9px 0 0;padding-left:18px;color:#51646d;font-size:11px}
+.more-options li+li{margin-top:8px}
+.more-options b{color:var(--text)}
+.more-options a{color:#153f59;font-weight:700}
 .sold-out-note{margin-top:22px;border-color:rgba(123,45,67,.16);background:#f7edf0}
 .sold-out-note::before{content:"⏱️"}
 .sold-out-note strong{color:var(--wine)}
