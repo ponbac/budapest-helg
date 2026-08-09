@@ -436,13 +436,66 @@ button{font:inherit;cursor:pointer}
 .sold-out-note p{color:#6f5961}
 .cruise-practical{margin-top:42px}
 
+/* Budapest to Vienna travel guide */
+.vienna-page .hero::before{
+  background:
+    radial-gradient(circle at 78% 20%,rgba(244,185,66,.2),transparent 32%),
+    linear-gradient(135deg,#173d50 0%,#205d68 58%,#31756d 100%);
+}
+.vienna-page .hero::after{border-color:rgba(255,255,255,.1);box-shadow:-170px 210px 0 -75px rgba(244,185,66,.62)}
+.vienna-page .hero h1{max-width:760px}
+.vienna-verdict{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(230px,.75fr);gap:14px;margin:28px 0;padding:22px;border:1px solid rgba(23,61,80,.13);border-radius:26px;background:linear-gradient(135deg,#e9f4f1,#fffaf2);box-shadow:var(--shadow)}
+.vienna-verdict>*{min-width:0}
+.vienna-verdict .verdict-alt{background:#173d50}
+.journey-line{display:flex;align-items:center;gap:7px;max-width:100%;margin-top:16px;padding:12px;overflow:hidden;border:1px solid rgba(23,61,80,.11);border-radius:15px;background:rgba(255,255,255,.75);color:#173d50}
+.journey-line span{min-width:0;font-size:10px;font-weight:600;line-height:1.35}
+.journey-line b{display:block;font-size:13px}
+.journey-line i{flex:none;color:#7b9b99;font-style:normal}
+.vienna-alert{border-color:rgba(23,61,80,.2);background:#eaf4f3}
+.vienna-alert::before{content:"📍"}
+.vienna-alert strong{color:#173d50}
+.vienna-alert p{color:#526b6e}
+.travel-table-wrap{max-width:100%;overflow-x:auto;border:1px solid rgba(23,61,80,.12);border-radius:20px;background:var(--card);box-shadow:var(--shadow);scrollbar-width:thin}
+.travel-table{width:100%;min-width:830px;border-collapse:collapse;font-size:12px}
+.travel-table th,.travel-table td{padding:13px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.travel-table th{background:#eaf4f3;color:#173d50;font-size:9px;letter-spacing:.09em;text-transform:uppercase}
+.travel-table tbody tr:last-child td{border-bottom:0}
+.travel-table tr.best td{background:#fff8df}
+.travel-table td small{display:block;margin-top:3px;color:var(--muted);font-size:9px}
+.travel-table td:last-child{color:var(--good);font-weight:700}
+.travel-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.travel-card{min-width:0;padding:18px;border:1px solid rgba(23,61,80,.11);border-radius:var(--radius);background:var(--card);box-shadow:var(--shadow);transition:transform .2s ease,box-shadow .2s ease}
+.travel-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-hover)}
+.travel-card.featured{border-color:rgba(244,185,66,.62);background:linear-gradient(180deg,#fff9e8,#fffdf9 38%)}
+.travel-card.bus-card{border-color:rgba(54,135,79,.2)}
+.travel-card-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:13px}
+.travel-icon{display:grid;place-items:center;width:44px;height:44px;flex:none;border-radius:15px;background:#fff0c8;font-size:23px;box-shadow:inset 0 0 0 1px rgba(23,61,80,.07)}
+.travel-icon.rail{background:#e7f1f5}.travel-icon.value{background:#e8f4ed}.travel-icon.bus{background:#eef6e8}
+.travel-status{max-width:70%;padding:6px 9px;border-radius:999px;font-size:9px;font-weight:700;line-height:1.2;text-align:center}
+.travel-status.good{background:var(--goodBg);color:var(--good)}
+.travel-status.warning{background:#fff0c2;color:#76510a}
+.travel-status.danger{background:#f8e8e4;color:#943a34}
+.travel-card h3{margin:5px 0 0;color:var(--text);font-family:'Fraunces',Georgia,serif;font-size:22px;line-height:1.12;letter-spacing:-.025em}
+.travel-card>p{margin:12px 0 0;color:var(--muted);font-size:12px}
+.travel-card>p b{color:var(--text)}
+.travel-facts{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.travel-facts span{padding:5px 8px;border-radius:999px;background:#eaf4f3;color:#17465f;font-size:10px;font-weight:700}
+.step-list{display:grid;gap:11px;margin:0;padding:0;list-style:none}
+.step-list li{display:grid;grid-template-columns:38px minmax(0,1fr);gap:13px;padding:17px 18px;border:1px solid rgba(23,61,80,.1);border-radius:18px;background:var(--card);box-shadow:var(--shadow)}
+.step-list li>span{display:grid;place-items:center;width:34px;height:34px;border-radius:12px;background:#173d50;color:#fff;font-size:12px;font-weight:700}
+.step-list strong{font-size:15px}
+.step-list p{margin:4px 0 0;color:var(--muted);font-size:12px}
+.source-links{display:flex;flex-wrap:wrap;gap:8px}
+.source-links a{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:9px 13px;border:1px solid rgba(23,61,80,.17);border-radius:12px;background:#fff;color:#173d50;font-size:12px;font-weight:700;text-decoration:none}
+.source-links a::after{content:"↗";margin-left:6px}
+
 .footer{margin-top:42px;padding-top:18px;border-top:1px dashed var(--line);color:var(--muted);font-size:11px;text-align:center}
 
 :focus-visible{outline:3px solid rgba(244,185,66,.9);outline-offset:3px}
 
 @media(max-width:680px){
   .app{padding:12px 12px 52px}
-  .site-nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));width:100%;margin-bottom:12px}
+  .site-nav{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));width:100%;margin-bottom:12px}
   .site-nav a{justify-content:center;min-width:0;padding:9px 5px;font-size:11px;text-align:center}
   .hero{padding:30px 22px;border-radius:26px}
   .hero::after{right:-118px;top:-110px}
@@ -486,6 +539,15 @@ button{font:inherit;cursor:pointer}
   .cruise-card{padding:15px 14px}
   .cruise-table{min-width:780px}
   .swipe-hint{display:block}
+  .vienna-page .hero h1{font-size:clamp(33px,10.4vw,45px);overflow-wrap:anywhere;text-wrap:wrap}
+  .vienna-verdict{grid-template-columns:minmax(0,1fr);padding:17px}
+  .journey-line{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;overflow:visible}
+  .journey-line span{min-width:0;padding:4px}
+  .journey-line i{display:none}
+  .travel-grid{grid-template-columns:1fr}
+  .travel-card{padding:15px 14px}
+  .travel-table{min-width:780px}
+  .step-list li{grid-template-columns:34px minmax(0,1fr);gap:10px;padding:15px 13px}
 }
 
 @media(max-width:390px){
